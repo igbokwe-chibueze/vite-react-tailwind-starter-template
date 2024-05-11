@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 //The Import below if for METHOD ONE.
 //import { SunIcon, MoonIcon } from "../constants/icons";
 
+// Add this "darkMode: 'class'," to the tailwindConfig File, after content but before theme.
+
 const ThemeSwitcher = () => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -45,9 +47,6 @@ const ThemeSwitcher = () => {
         onClick={toggleTheme}
          
       >
-        {/* Use any of the methos below to change button image on toggle */}
-
-        {/* METHOD ONE */}
         {/* {isDarkMode ? (
             // Render the first path(moon) when toggle is true
             <SunIcon className={"text-black bg-white rounded-full p-1"}/>
@@ -55,9 +54,6 @@ const ThemeSwitcher = () => {
             // Render the second path(sun) when toggle is false
             <MoonIcon className={"text-white bg-black rounded-full p-1"}/>
         )} */}
-
-        {/* METHOD TWO */}
-        {/* <img src={isDarkMode ? moon : sun} alt="dark mode" /> */}
         
       </button>
       
