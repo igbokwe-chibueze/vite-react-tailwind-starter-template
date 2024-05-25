@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 //The Import below if for METHOD ONE.
 //import { SunIcon, MoonIcon } from "../constants/icons";
 
+// Add this "darkMode: 'class'," to the tailwindConfig File, after content but before theme.
+
 const ThemeSwitcher = () => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -40,14 +42,14 @@ const ThemeSwitcher = () => {
 
   return (
     <div className="flex items-center space-x-2">
-      {/* None animated button */}
+
+      {/* Button Method */}
       <button
         onClick={toggleTheme}
-         
       >
-        {/* Use any of the methos below to change button image on toggle */}
+        {/* Use onr of the button methods below to change button image on toggle */}
 
-        {/* METHOD ONE */}
+        {/* BTN METHOD ONE */}
         {/* {isDarkMode ? (
             // Render the first path(moon) when toggle is true
             <SunIcon className={"text-black bg-white rounded-full p-1"}/>
@@ -56,10 +58,34 @@ const ThemeSwitcher = () => {
             <MoonIcon className={"text-white bg-black rounded-full p-1"}/>
         )} */}
 
-        {/* METHOD TWO */}
+        {/* BTN METHOD TWO */}
         {/* <img src={isDarkMode ? moon : sun} alt="dark mode" /> */}
         
       </button>
+
+
+      {/* Toggle Switch Method */}
+      {/* <label className=" inline-flex items-center cursor-pointer ">
+        <input
+          type="checkbox"
+          checked={isDarkMode}
+          onChange={toggleTheme}
+          className="sr-only peer"
+        />
+        <div
+          className=" flex items-center w-11 h-6 rounded-full bg-skin-fill
+          peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-skin-focus2 "
+        >
+          <div
+            className={` w-fit p-0.5 shadow-sm rounded-full 
+              transition-all duration-300 bg-skin-fill4 text-skin-base-opposite
+              ${isDarkMode  ? "translate-x-6 rotate-0" : "-rotate-180"}`
+            }
+          >
+            {isDarkMode  ? <SunIcon className={" w-[18px] h-[18px] "}/> : <MoonIcon className={" w-[18px] h-[18px] "}/>}
+          </div>
+        </div>
+      </label> */}
       
     </div>
   )
