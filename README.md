@@ -57,9 +57,13 @@ To use this starter template, follow these steps:
 - `src/App.js`: Main component where your application starts.
 - `src/components/`: Directory for storing reusable components.
 - `src/pages/`: Directory for defining your application's pages.
+- `src/styles/`: Directory for custom stylesheets or Tailwind CSS configurations.
 - `src/wrappers/`: Directory for placing higher-order component (HOC) files.
-- `public/`: Contains static files like HTML, images, and fonts.
+- `src/hooks/`: Directory for custom hooks.
+- `src/sections/`: Directory for different sections of your application.
+- `src/constants/`: Directory for storing data constants.
 - `vite.config.js`: Vite configuration file for customizing Vite setup.
+- `trash/`: Directory for storing rough or temporary files (this directory will be ignored on push).
 
 ## Contributing
 
