@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 //The Import below if for METHOD ONE.
 //import { SunIcon, MoonIcon } from "../constants/icons";
 
-// Add this "darkMode: 'class'," to the tailwindConfig File, after content but before theme.
+// Add this " darkMode: 'class'," to the tailwindConfig File, after content but before theme.
 
 const ThemeSwitcher = () => {
 
@@ -12,7 +12,7 @@ const ThemeSwitcher = () => {
   useEffect(() => {
     // Use local storage to remember the user's theme preference
     const storedTheme = localStorage.getItem("theme");
-    
+
     // Check for system's preferred theme
     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -60,7 +60,7 @@ const ThemeSwitcher = () => {
 
         {/* BTN METHOD TWO */}
         {/* <img src={isDarkMode ? moon : sun} alt="dark mode" /> */}
-        
+
       </button>
 
 
@@ -86,7 +86,7 @@ const ThemeSwitcher = () => {
           </div>
         </div>
       </label> */}
-      
+
     </div>
   )
 }
