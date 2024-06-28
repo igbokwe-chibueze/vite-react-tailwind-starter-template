@@ -6,9 +6,10 @@ const CustomBtn = ({
   label,
   showLabelOnHover,
   iconURL,
-  backgroundColor,
-  textColor,
-  borderColor,
+  backgroundStyle,
+  textStyle,
+  borderStyle,
+  focusStyle,
   btnType,
   onBtnClick,
   disabled,
@@ -21,28 +22,27 @@ const CustomBtn = ({
 
   return (
     <button
-      className={`z-20 flex justify-center items-center border gap-4 group
-      text-lg tablet:text-2xl font-bold leading-none rounded-full
-      hover:bg-[#6BC800] disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
-      ${
-        backgroundColor
-          ? `${backgroundColor} ${textColor} ${borderColor}`
-          : "bg-chartreuse-color text-midnight-green border-midnight-green"
-      }`}
+      className={`inline-flex items-center justify-center px-5 py-3 rounded-lg transition-colors duration-700 ease-in-out
+        disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
+        ${` bg-skin-fill-accent hover:bg-skin-fill-accent-hover ${backgroundStyle} `}
+        ${` text-base font-medium text-center text-skin-inverted ${textStyle} `}
+        ${` border border-skin-border ${borderStyle} `} 
+        ${` focus:ring-4 focus:ring-skin-focus2 ${focusStyle} `}
+      `}
       type={btnType || "button"}
       onClick={handleClick}
       disabled={disabled}
     >
-      <div className={showLabelOnHover ? "hidden group-hover:flex" : ""}>
-        {label || "See More"}
-      </div>
+      <p className={showLabelOnHover ? " hidden group-hover:flex  " : ""}>
+        {label || 'See More'}
+      </p>
 
       {/* Use the iconUrl if i want to use an svg icon */}
       {iconURL && (
         <img
           src={iconURL}
-          alt='arrow right icon'
-          className='ml-2 rounded-full bg-white w-5 h-5'
+          alt='icon'
+          className=" ml-2 w-5 h-5 rounded-full bg-skin-fill-primary "
         />
       )}
       
@@ -58,9 +58,10 @@ CustomBtn.propTypes = {
   label: PropTypes.string,
   showLabelOnHover: PropTypes.bool,
   iconURL: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  borderColor: PropTypes.string,
+  backgroundStyle: PropTypes.string,
+  textStyle: PropTypes.string,
+  borderStyle: PropTypes.string,
+  focusStyle: PropTypes.string,
   btnType: PropTypes.oneOf(['button', 'submit', 'reset']),
   onBtnClick: PropTypes.func,
   disabled: PropTypes.bool,
