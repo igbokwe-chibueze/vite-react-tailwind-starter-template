@@ -50,13 +50,7 @@ const ThemeSwitcher = () => {
         {/* Use onr of the button methods below to change button image on toggle */}
 
         {/* BTN METHOD ONE */}
-        {/* {isDarkMode ? (
-            // Render the first path(moon) when toggle is true
-            <SunIcon className={"text-black bg-white rounded-full p-1"}/>
-         ) : (
-            // Render the second path(sun) when toggle is false
-            <MoonIcon className={"text-white bg-black rounded-full p-1"}/>
-        )} */}
+        {/* {isDarkMode ? <SunIcon /> : <MoonIcon />} */}
 
         {/* BTN METHOD TWO */}
         {/* <img src={isDarkMode ? moon : sun} alt="dark mode" /> */}

@@ -27,7 +27,7 @@ const CustomBtn = ({
         ${` bg-skin-fill-accent hover:bg-skin-fill-accent-hover ${backgroundStyle} `}
         ${` text-base font-medium text-center text-skin-inverted ${textStyle} `}
         ${` border border-skin-border ${borderStyle} `} 
-        ${` focus:ring-4 focus:ring-skin-focus2 ${focusStyle} `}
+        ${` focus:outline-none ${focusStyle} `}
       `}
       type={btnType || "button"}
       onClick={handleClick}
